@@ -1,3 +1,4 @@
+"use client";
 import { ApiReferenceReact } from "@scalar/api-reference-react";
 
 export default function Page() {
