@@ -1,15 +1,13 @@
 "use client";
 
-import { ApiReferenceReact } from "@scalar/api-reference-react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <ApiReferenceReact
-      configuration={{
-        spec: {
-          url: "/documents.json",
-        },
-      }}
-    />
-  );
+  // redirect to the documentation page
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/documentation");
+  }, [router]);
+  return null;
 }
